@@ -1,0 +1,54 @@
+﻿-------Terminal-------
+mongod --dbpath=C:\MongoData //if connect fail mongo
+
+Run Nodejs
+nodemon / node app.js(server port) // start server you want go to path or directory in your file stil you can run server PASS 
+
+
+-----GIT-----
+GIT add
+GIT commit -m "you enter massage please!!!"
+GIT status
+GIT diff
+GIT log
+GIT branch
+git branch filename //สร้างไฟล์Branchใหม่
+GIT checkout With filename
+GIT reset filename //เวลาเผลอลบไปแล้ว แล้วก็ยังไป add เข้าสู่ staged แล้ว ก็ต้องใช้ ถ้าต้องการกู้คืนfileใช้มัน
+git reset --soft HEAD~1 //revert to commit ล่าสุด
+GIT checkout With branchname
+git remove --cached filename //ลบไฟล์ออกจากtrack
+//เวลาเพื่อไฟล์ไปไหม่ให้ ใช้ GIT add filename และตามด้วย GIT commit -m "you enter massage please!!!"
+//การใช้ GIT merge เวลาต้องการรวมสิ่งที่ Branchออกไปให้ใช้มันโดยจะต้อง
+GIT checkout master
+GIT merge filebranchname
+----------------------------------
+git branch -d branch_name             //ลบbranch
+git branch -d create_new_page
+---------------------------------
+
+---GIT UP---
+เพิ่ม url ของ remote (Server) เพื่อให้รู้ว่าเราจะฝากโค๊ดไว้ที่ใด
+1.open Terminal เข้าไปที่path ไฟล์ที่จะ Upขึ้นไปไว้ยัง remote(server)
+2. พิมพ์คำสั่ง git remote add origin git@github.com:Phonbopit/git101.git //ตามURLที่ระบุไว้เมื่อตอนเราสร้าง Repository ใน www.GITHUB.com
+3.check ว่าเราRemoteได้ถุกต้องหรือเปล่าโดยพิมพ์คำสั่ง git remote -v
+4.ต่อมาเราจะทำการส่งโค๊ดจากเครื่อง local ไปที่ Github ด้วยคำสั่ง git push -u origin master
+	- u : เอาไว้จำ parameter origin master ต่อไปก็แค่พิมพ์ git push
+	- origin : คือชื่อ alias ของ remote (github)
+	- master : คือชื่อ branch ที่เราต้องการ push ขึ้นไป
+5.username or email และ password ของ GITHUB
+6. waiting... เมื่อ push โค๊ดเรียบร้อย จะได้ข้อความบางอย่างขึ้นมา
+7.checkดูที่ web server ว่าข้อมูลจาก file ที่เราupขึ้นไปมาแล้ว เป็นอันเสร็จสิ้น
+
+การเช็คโค๊ดของเราระหว่าง local กับ remote(server) ว่าโค๊ดตรงกันล่าสุดหรือไม่
+GIT fetch //ถ้าไม่มีอะไรเกิดขึ้นก็แปลว่าล่าสุด ถ้ามีข้อความ remote: Counting objects: 3, done.
+			           remote: Compressing objects: 100% (2/2), done.
+			           remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+				   Unpacking objects: 100% (3/3), done.
+				   From github.com:Phonbopit/git101
+   				   4f176d9..a7f9fd4  master     -> origin/master แปลว่า versionหรือcodeไม่ตรงกัน
+วิธีการที่เราจะรวมโค๊ดจาก remote มาที่ local ก็ใช้วิธีเดียวกันกับการรวมโค๊ดคนละ branch นั่นก็คือ
+GIT merge filename on Remote(server) นั้นก็คือ orgin/master **เหมาะสำหรับทำงานเป็นกลุ่มหรือหลายๆคน
+
+
+
